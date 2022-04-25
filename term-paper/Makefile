@@ -19,7 +19,7 @@ CONFIG_YAML += pandoc/lang/ru.yaml pandoc/formats/pdf.yaml pandoc/include/biblio
 ## Standard fonts
 CONFIG_YAML += pandoc/formats/luatex/fonts.yaml
 ## Julia font for program code
-CONFIG_YAML += pandoc/formats/luatex/fonts-julia.yaml
+#CONFIG_YAML += pandoc/formats/luatex/fonts-julia.yaml
 RESOURCE_PATH = --resource-path ".:image:text"
 
 ## include markdown files
@@ -32,7 +32,7 @@ EXPORT_LIST += export LUA_PATH="pandoc/lua/?.lua;;";
 FILTERS += --lua-filter=pandoc/filters/menukeys.lua
 # CONFIG_YAML += pandoc/filters/menukeys.yaml
 ## Diagrams
-EXPORT_LIST += export PLANTUML=/usr/share/plantuml/lib/plantuml.jar;
+EXPORT_LIST += export PLANTUML=/usr/share/java/plantuml.jar;
 FILTERS += --filter=pandoc/filters/plantuml.py # Befor minted filter
 ## Code listings
 FILTERS += --lua-filter=pandoc/filters/include-code-files.lua # Befor minted filter
